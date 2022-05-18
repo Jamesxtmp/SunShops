@@ -1,0 +1,74 @@
+{
+  "chats": {
+    "chatId": "mensajes"
+  },
+  "users": {
+    "SunshopX": {
+      "userUID": "userUID",
+      "haveShop": true,
+      "information": {},
+      "categories": {
+        "1" : {
+          "title": "Cataloge",
+          "iconType": "fwName",
+          "iconlink": "fa-book-open",
+          "content": [
+            {
+              "sectionType": "tools",
+              "backgroudType": "img",
+              "backgroudLink": "https://picsum.photos/500/700?random",
+              "columns": 3,
+              "prices": true,
+              "filters": true,
+              "searches": true,
+              "names": true
+            }
+          ]
+        },
+        "2": {
+          "title": "Pueba",
+          "iconType": "imgSrc",
+          "iconlink": "https://picsum.photos/30/30?random",
+          "content": [
+            {
+              "sectionType": "toogle",
+              "backgroudType": "color",
+              "backgroudLink": "#b2cfdc",
+              "title": "Mi Desplegable",
+              "columns": 4,
+              "prices": true,
+              "names": true,
+              "productsInfo": { "filter": "filter", "content": "az" }
+            },
+            {
+              "sectionType": "fixed",
+              "backgroudType": "img",
+              "backgroudLink": "https://picsum.photos/500/700?random",
+              "title": "Mi Fijo",
+              "columns": 3,
+              "prices": false,
+              "names": true,
+              "productsInfo": { "filter": "tag", "content": ["tag1", "nigth"] }
+            },
+            {
+              "sectionType": "carousel",
+              "backgroudType": "color",
+              "backgroudLink": "#aec6a4",
+              "title": "Mi Carusel",
+              "columns": 4,
+              "rows": 2,
+              "prices": true,
+              "names": false,
+              "productsInfo": { "filter": "free", "content": [1, 2] }
+            }
+          ]
+        }
+      },
+      "products": {},
+      "tagsAndColors": {},
+      "conversations": {},
+      "places": {}
+    }
+
+  }
+}

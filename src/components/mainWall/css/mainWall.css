@@ -1,0 +1,50 @@
+.mainWall{
+    background-color: var(--background-apartad);
+    height: 400px;
+    color: var(--text-color);
+}
+/* .div-head-main{
+
+} */
+
+
+.div-portada{
+    height: 152px;
+    width: 100vw;
+    overflow: hidden;
+}
+.div-portada img{
+    position: relative;
+    bottom: 76px;
+    width: 100%;
+}
+
+.div-perfil-photo{
+    position: absolute;
+    top: calc( 152px - 15vw );
+    left: 20px;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+.div-perfil-photo img{
+    border-radius: inherit;
+    width: 100%;
+    min-height: 100%;
+}
+
+.div-dates-car{
+    position: absolute;
+    top: calc( 152px + 12px );
+    left: calc( 30vw + 20px + 12px);
+    width: calc( 100vw - ( 30vw + 20px + 32px ) );
+}
+.position-buttons{
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+/* .div-sections-selectors{
+
+} */
