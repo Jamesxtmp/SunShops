@@ -1,5 +1,3 @@
-import './css/sellDatesView.css'
-
 const SellDatesView = ({
     followers = 123123,
     calification = 4

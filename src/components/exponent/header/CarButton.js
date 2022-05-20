@@ -1,5 +1,3 @@
-import './css/buttonStyle.css'
-
 const CarButton = () => {
     return(
         <div className='button-style-ancho' >

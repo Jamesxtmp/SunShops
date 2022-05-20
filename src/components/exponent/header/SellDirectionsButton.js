@@ -1,6 +1,3 @@
-import './css/buttonStyle.css'
-
-
 const SellDirectionsButton = () => {
     return(
         <div className="button-style">

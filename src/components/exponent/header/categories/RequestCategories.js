@@ -8,13 +8,9 @@ import { setCategories } from './categoriesSlice'
 //Firebase Importations
 import { getDatabase, ref, onValue} from "firebase/database"
 
-//Components Importations
-import CategoriesSelectors from './CategoriesSelectors'
-
-
 //Firebase Constantes
 const db = getDatabase();
-const categoriesRef = ref(db, 'users/' + 'userId' + '/categories')
+const categoriesRef = ref(db, 'users/userId/categories')
 
 //Functions
 const transformJsonToArray = (json, array = []) => {
@@ -42,10 +38,6 @@ const CategoriesIndex = ( ) => {
             setCategoriesData( arrData )
         })
     }, [])
-    return(
-        <>
-            <CategoriesSelectors categories={ categoriesData } />
-        </>
-    )
+    return(<>{ console.log( categoriesData ) }</>)
 }
 export default CategoriesIndex

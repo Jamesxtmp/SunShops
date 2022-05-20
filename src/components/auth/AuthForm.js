@@ -1,7 +1,8 @@
-import './css/authForm.css'
-import { registerUser } from './../firebase/registerUser'
-import { loginGoogle } from './../firebase/loginGoogle'
-import { loginUserPass } from './../firebase/loginUserPass'
+import { registerUser } from '../../firebase/login/registerUser'
+import { loginGoogle } from '../../firebase/login/loginGoogle'
+import { loginUserPass } from '../../firebase/login/loginUserPass'
+
+import '../../css/auth/indexAuth.css'
 
 const AuthForm = () => {
 

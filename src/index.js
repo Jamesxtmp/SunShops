@@ -16,12 +16,12 @@ import { appFire } from './firebase/initializeFireBase'
 import './css/index.css'
 
 /* Components Importation */
-import App from './components/App'
-import AuthForm from './components/AuthForm';
-import ShopIndex from './components/shopIndex/ShopIndex';
+import AuthForm from './components/auth/AuthForm';
+import ExponentIndex from './components/exponent/ExponentIndex';
 
 
-if( appFire ){} //? Solo llamo a appFire para que se ejecute una vez
+/* PreRun Ejecuted */
+if( appFire ){}
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -30,7 +30,7 @@ root.render(
         <Provider store={store} >
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={ <ShopIndex /> } ></Route>
+                    <Route path='/' element={ <ExponentIndex /> } ></Route>
                     <Route path='/auth' element={ <AuthForm /> } ></Route>
                 </Routes>
             </BrowserRouter>  

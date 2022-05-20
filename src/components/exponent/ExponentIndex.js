@@ -1,13 +1,10 @@
-/* CSS Importation */
-import './css/shopIndex.css'
-
 /* Components Importation */
 import SellDatesView from './header/SellDatesView'
 import SellDirectionsButton from './header/SellDirectionsButton'
 import CarButton from './header/CarButton'
-import CategoriesIndex from './header/categories/CategoriesIndex'
+import RequestCategories from './header/categories/RequestCategories'
 
-const MainWall = ({
+const ExponentIndex = ({
         portadaSrc = 'temporaly/portada.jpg',
         perfilSrc = 'temporaly/perfil.jpg',
     }) => {
@@ -15,10 +12,10 @@ const MainWall = ({
         <div className="mainWall" >
             <div className="div-head-main" >
                 <div className="div-portada" >
-                    <img src={ portadaSrc } />
+                    <img src={ portadaSrc } alt='Portada' />
                 </div>
                 <div className="div-perfil-photo" >
-                    <img src={ perfilSrc } />
+                    <img src={ perfilSrc } alt='Perfil'/>
                 </div>
                 <div className="div-dates-car" >
                     <SellDatesView></SellDatesView>
@@ -28,10 +25,10 @@ const MainWall = ({
                     </div>
                 </div>
                 <div className="div-sections-selectors" >
-                    <CategoriesIndex></CategoriesIndex>
+                    <RequestCategories></RequestCategories>
                 </div>
             </div>
         </div>
     )
 }
-export default MainWall
+export default ExponentIndex
