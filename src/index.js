@@ -18,10 +18,10 @@ import './css/index.css'
 /* Components Importation */
 import App from './components/App'
 import AuthForm from './components/AuthForm';
-import MainWall from './components/mainWall/MainWall';
+import ShopIndex from './components/shopIndex/ShopIndex';
 
 
-if( appFire ){}
+if( appFire ){} //? Solo llamo a appFire para que se ejecute una vez
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -30,7 +30,7 @@ root.render(
         <Provider store={store} >
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={ <MainWall /> } ></Route>
+                    <Route path='/' element={ <ShopIndex /> } ></Route>
                     <Route path='/auth' element={ <AuthForm /> } ></Route>
                 </Routes>
             </BrowserRouter>  

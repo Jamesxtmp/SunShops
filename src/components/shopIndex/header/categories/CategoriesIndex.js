@@ -8,10 +8,15 @@ import { setCategories } from './categoriesSlice'
 //Firebase Importations
 import { getDatabase, ref, onValue} from "firebase/database"
 
+//Components Importations
+import CategoriesSelectors from './CategoriesSelectors'
+
+
 //Firebase Constantes
 const db = getDatabase();
 const categoriesRef = ref(db, 'users/' + 'userId' + '/categories')
 
+//Functions
 const transformJsonToArray = (json, array = []) => {
     for( let i in json ) {
         array.push( json[i] );
@@ -19,9 +24,9 @@ const transformJsonToArray = (json, array = []) => {
     return array
 }
 
-const SelectorsCategories = ( ) => {
+//# Inicio de La aplicacion
+const CategoriesIndex = ( ) => {
     const [ categoriesData, setCategoriesData ] = useState([])
-
 
     //? Seteando los datos "categorias" de Firebase a Store de Redux
     const dispatch = useDispatch()
@@ -38,10 +43,9 @@ const SelectorsCategories = ( ) => {
         })
     }, [])
     return(
-        <div>
-            {/* <button > { Object.keys(categoriesData).length === 0 ? '' : { ...categoriesData } </button> */}
-            <h3> { categoriesData.length ? console.log( categoriesData ) : console.log( 'Cargando Categorias' ) } </h3>
-        </div>
+        <>
+            <CategoriesSelectors categories={ categoriesData } />
+        </>
     )
 }
-export default SelectorsCategories
+export default CategoriesIndex

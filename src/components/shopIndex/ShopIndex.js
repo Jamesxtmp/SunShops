@@ -1,11 +1,11 @@
 /* CSS Importation */
-import './css/mainWall.css'
+import './css/shopIndex.css'
 
 /* Components Importation */
-import SellDatesView from './SellDatesView'
-import SellDirectionsButton from './SellDirectionsButton'
-import CarButton from './CarButton'
-import SelectorsCategories from './categories/SelectorsCategories'
+import SellDatesView from './header/SellDatesView'
+import SellDirectionsButton from './header/SellDirectionsButton'
+import CarButton from './header/CarButton'
+import CategoriesIndex from './header/categories/CategoriesIndex'
 
 const MainWall = ({
         portadaSrc = 'temporaly/portada.jpg',
@@ -28,7 +28,7 @@ const MainWall = ({
                     </div>
                 </div>
                 <div className="div-sections-selectors" >
-                    <SelectorsCategories></SelectorsCategories>
+                    <CategoriesIndex></CategoriesIndex>
                 </div>
             </div>
         </div>
