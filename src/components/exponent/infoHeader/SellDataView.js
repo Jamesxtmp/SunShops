@@ -56,7 +56,6 @@ const SellDatesView = ({
                 console.log( 'Algo Fallo en el switch que asigna los colores a la calificaion' )
                 break
         }
-        console.log( document.styleSheets )
         document.documentElement.style.setProperty('--color-calification', colorToCalification)
     }
     const followersAns = convertSegidores()
@@ -65,7 +64,7 @@ const SellDatesView = ({
         <div className="sellDatesView" >
             <div className="followers" > {`${ followersAns } Seguidores`} </div>
             <div className="calification" >
-                <div className="calification-string"> Calificación </div>
+                <div className="calification-string">Calificación</div>
                 <div className={`calification-point ${ calification >= 0 ? 'active' : 'inactive'}`}></div>
                 <div className={`calification-point ${ calification >= 2 || calification ==  0 ? 'active' : 'inactive'}`}></div>
                 <div className={`calification-point ${ calification >= 3 || calification ==  0 ? 'active' : 'inactive'}`}></div>

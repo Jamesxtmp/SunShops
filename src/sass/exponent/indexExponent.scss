@@ -4,10 +4,43 @@
 
 .exponent{
     width: 100%;
-}
-.exponent img[alt='Portada']{
-    width: 100%;
-}
-.exponent img[alt='Perfil']{
-    width: 200px;
+    height: 100vh;
+    max-width: 800px;
+    margin: auto;
+    
+    img[alt='Portada'], img[alt='Perfil'] {
+        width: 100%;
+    }
+
+    .head-main{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .portada-photo{
+            height: 15vh;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            @media ( min-width: 750px ) {
+                border-radius: 0 0 16px 16px;
+                height: 30vh;
+            }
+        }
+        .perfil-photo{
+            display: inline-flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            width: 25vw;
+            left: 4vw;
+            @media ( min-width: 750px ) {
+                width: 15vw;
+            }
+        }
+        .more-info{
+            display: inline-flex;
+            position: absolute;
+            right: 4vw;
+        }
+    }
 }

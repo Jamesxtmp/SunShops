@@ -38,6 +38,6 @@ const CategoriesIndex = ( ) => {
             setCategoriesData( arrData )
         })
     }, [])
-    return(<>{ console.log( categoriesData ) }</>)
+    return(<></>)
 }
 export default CategoriesIndex

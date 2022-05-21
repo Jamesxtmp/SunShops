@@ -7,12 +7,12 @@
     font-family: Calibri;
 }
 #root{
+    --bg-section: #242526;
+    --bg: #18191a;
+    --font-color: #e4e6eb;
+    
+    
     overflow: hidden;
-}
-
-@media ( min-width: 768px ) {
-    #root{
-        width: 50%;
-        
-    }
+    background-color: var(--bg);
+    color: var(--font-color);
 }

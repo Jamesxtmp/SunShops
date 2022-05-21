@@ -1,7 +1,6 @@
-const App = () => {
+const App = ( { component } ) => {
     return(
         <div>
-            App
         </div>
     )
 }
