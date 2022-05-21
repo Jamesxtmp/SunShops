@@ -1,0 +1,13 @@
+@use 'infoHeader';
+@use 'categoriesShow';
+@use 'categoriesSelectors';
+
+.exponent{
+    width: 100%;
+}
+.exponent img[alt='Portada']{
+    width: 100%;
+}
+.exponent img[alt='Perfil']{
+    width: 200px;
+}

@@ -1,34 +1,35 @@
 /* Components Importation */
-import SellDatesView from './header/SellDatesView'
-import SellDirectionsButton from './header/SellDirectionsButton'
-import CarButton from './header/CarButton'
-import RequestCategories from './header/categories/RequestCategories'
+import RequestCategories from './RequestCategories'
+
+import SellDatesView from './infoHeader/SellDatesView'
+import SellDirectionsButton from './infoHeader/SellDirectionsButton'
+import CarButton from './infoHeader/CarButton'
 
 const ExponentIndex = ({
         portadaSrc = 'temporaly/portada.jpg',
         perfilSrc = 'temporaly/perfil.jpg',
     }) => {
-    return(
-        <div className="mainWall" >
-            <div className="div-head-main" >
-                <div className="div-portada" >
+    return(<>
+        <RequestCategories />
+        <div className="exponent" >
+            <div className="head-main" >
+                <div className="portada-photo" >
                     <img src={ portadaSrc } alt='Portada' />
                 </div>
-                <div className="div-perfil-photo" >
+                <div className="perfil-photo" >
                     <img src={ perfilSrc } alt='Perfil'/>
                 </div>
-                <div className="div-dates-car" >
+                <div className="more-info" >
                     <SellDatesView></SellDatesView>
-                    <div className='position-buttons' >
+                    <div className='buttons-main' >
                         <SellDirectionsButton></SellDirectionsButton>
                         <CarButton></CarButton>
                     </div>
                 </div>
                 <div className="div-sections-selectors" >
-                    <RequestCategories></RequestCategories>
                 </div>
             </div>
         </div>
-    )
+    </>)
 }
 export default ExponentIndex

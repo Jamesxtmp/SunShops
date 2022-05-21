@@ -26,14 +26,14 @@ if( appFire ){}
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-    //<React.StrictMode>
-        <Provider store={store} >
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={ <ExponentIndex /> } ></Route>
-                    <Route path='/auth' element={ <AuthForm /> } ></Route>
-                </Routes>
-            </BrowserRouter>  
-        </Provider>
-    //</React.StrictMode>
+    <>{/* <React.StrictMode> */}
+    <Provider store={store} >
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={ <ExponentIndex /> } ></Route>
+                <Route path='/auth' element={ <AuthForm /> } ></Route>
+            </Routes>
+        </BrowserRouter>  
+    </Provider>
+    {/* </React.StrictMode> */}</>
 )

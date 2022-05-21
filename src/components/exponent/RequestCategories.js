@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 //Redux Importations
 import { useDispatch } from 'react-redux'
-import { setCategories } from './categoriesSlice'
+import { setCategories } from './categoriesSelectors/categoriesSlice'
 
 //Firebase Importations
 import { getDatabase, ref, onValue} from "firebase/database"

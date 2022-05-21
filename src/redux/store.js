@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import categoriesReducer from '../components/exponent/header/categories/categoriesSlice'
+import categoriesReducer from '../components/exponent/categoriesSelectors/categoriesSlice'
 
 export const store = configureStore({
   reducer: {

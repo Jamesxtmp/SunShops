@@ -1,0 +1,18 @@
+// @use 'auth/indexAuth';
+@use 'exponent/indexExponent';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+#root{
+    overflow: hidden;
+}
+
+@media ( min-width: 768px ) {
+    #root{
+        width: 50%;
+        
+    }
+}

@@ -56,6 +56,7 @@ const SellDatesView = ({
                 console.log( 'Algo Fallo en el switch que asigna los colores a la calificaion' )
                 break
         }
+        console.log( document.styleSheets )
         document.documentElement.style.setProperty('--color-calification', colorToCalification)
     }
     const followersAns = convertSegidores()
