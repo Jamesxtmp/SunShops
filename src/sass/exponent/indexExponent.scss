@@ -34,13 +34,31 @@
             width: 25vw;
             left: 4vw;
             @media ( min-width: 750px ) {
-                width: 15vw;
+                left: 5%;
+                width: 18%;
             }
         }
         .more-info{
             display: inline-flex;
             position: absolute;
             right: 4vw;
+            @media ( min-width: 750px ) {
+                right: 5%;
+            }
+        }
+        .shop-name{
+            width: 92vw;
+            display: inline-block;
+            margin: auto;
+            position: relative;
+            font-family: Cambria;
+            font-size: .8em;
+            max-height: 2.5em;
+            overflow: hidden;
+            @media ( min-width: 750px ) {
+                width: 90%;
+                font-size: 1.5em;
+            }
         }
     }
 }

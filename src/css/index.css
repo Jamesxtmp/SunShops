@@ -1,14 +1,11 @@
-.sellDatesView {
-  background-color: rgba(0, 255, 255, 0.144);
-}
 .sellDatesView .calification .calification-string {
   display: inline-block;
   margin-right: 5px;
 }
 .sellDatesView .calification .calification-point {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   margin-right: 2px;
   border-radius: 50%;
   border: 1px solid var(--font-color);
@@ -18,6 +15,20 @@
 }
 .sellDatesView .calification .inactive {
   background-color: rgba(0, 0, 0, 0);
+}
+
+.buttons-main {
+  display: flex;
+  align-items: center;
+}
+.buttons-main .button-style, .buttons-main .button-style-ancho {
+  border: 1px solid var(--font-color);
+  border-radius: 8px;
+  padding: 5px;
+  margin-left: 4px;
+}
+.buttons-main .button-style-ancho {
+  padding: 5px 16px;
 }
 
 .exponent {
@@ -56,13 +67,35 @@
 }
 @media (min-width: 750px) {
   .exponent .head-main .perfil-photo {
-    width: 15vw;
+    left: 5%;
+    width: 18%;
   }
 }
 .exponent .head-main .more-info {
   display: inline-flex;
   position: absolute;
   right: 4vw;
+}
+@media (min-width: 750px) {
+  .exponent .head-main .more-info {
+    right: 5%;
+  }
+}
+.exponent .head-main .shop-name {
+  width: 92vw;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  font-family: Cambria;
+  font-size: 0.8em;
+  max-height: 2.5em;
+  overflow: hidden;
+}
+@media (min-width: 750px) {
+  .exponent .head-main .shop-name {
+    width: 90%;
+    font-size: 1.5em;
+  }
 }
 
 * {

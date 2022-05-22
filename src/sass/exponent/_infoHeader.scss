@@ -1,5 +1,4 @@
 .sellDatesView{
-    background-color: rgba(0, 255, 255, 0.144);
     .followers{
     }
     .calification{
@@ -9,8 +8,8 @@
         }
         .calification-point{
             display: inline-block;
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             margin-right: 2px;
             border-radius: 50%;
             border: 1px solid var(--font-color);
@@ -24,10 +23,17 @@
     }
 }
 .buttons-main{
-    .button-style{
+    display: flex;
+    align-items: center;
 
+    .button-style, .button-style-ancho{
+        border: 1px solid var(--font-color);
+        border-radius: 8px;
+        padding: 5px;
+        margin-left: 4px;
     }
     .button-style-ancho{
+        padding: 5px 16px;
 
     }
 }

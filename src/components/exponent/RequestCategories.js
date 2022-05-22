@@ -21,7 +21,7 @@ const transformJsonToArray = (json, array = []) => {
 }
 
 //# Inicio de La aplicacion
-const CategoriesIndex = ( ) => {
+const RequestCategories = ( ) => {
     const [ categoriesData, setCategoriesData ] = useState([])
 
     //? Seteando los datos "categorias" de Firebase a Store de Redux
@@ -38,6 +38,6 @@ const CategoriesIndex = ( ) => {
             setCategoriesData( arrData )
         })
     }, [])
-    return(<></>)
+    return(null)
 }
-export default CategoriesIndex
+export default RequestCategories

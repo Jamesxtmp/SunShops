@@ -16,7 +16,6 @@ import { appFire } from './firebase/initializeFireBase'
 import './css/index.css'
 
 /* Components Importation */
-import App from './components/App';
 import AuthForm from './components/auth/AuthForm';
 import ExponentIndex from './components/exponent/ExponentIndex';
 
