@@ -5,12 +5,12 @@ import { createRoot } from 'react-dom/client';
 /* ReactRoute Importation*/
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+/* App from Firebase */
+import { appFire } from './firebase/initializeFireBase'
+
 /* Redux Importation */
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
-
-/* App from Firebase */
-import { appFire } from './firebase/initializeFireBase'
 
 /* CSS Importation */
 import './css/index.css'

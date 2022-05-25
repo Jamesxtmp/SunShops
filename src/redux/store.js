@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import categoriesReducer from '../components/exponent/categoriesSelectors/categoriesSlice'
-import cssReducer from './slicesGeneral/cssMetods'
+import cssReducer from './slices/cssMetods'
+import fireDataReducer from './slices/extractFireData'
 
 export const store = configureStore({
   reducer: {
-    categoriesReducer,
     cssReducer,
+    fireDataReducer,
   },
 })

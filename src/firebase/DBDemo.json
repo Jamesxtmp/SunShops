@@ -3,12 +3,12 @@
     "chatId": "mensajes"
   },
   "users": {
-    "SunshopX": {
+    "sunshops": {
       "userUID": "userUID",
       "haveShop": true,
       "information": {},
       "categories": {
-        "1" : {
+        "0": {
           "title": "Cataloge",
           "iconType": "fwName",
           "iconlink": "fa-book-open",
@@ -25,7 +25,7 @@
             }
           ]
         },
-        "2": {
+        "1": {
           "title": "Pueba",
           "iconType": "imgSrc",
           "iconlink": "https://picsum.photos/30/30?random",
@@ -38,7 +38,10 @@
               "columns": 4,
               "prices": true,
               "names": true,
-              "productsInfo": { "filter": "filter", "content": "az" }
+              "productsInfo": {
+                "filter": "filter",
+                "content": "az"
+              }
             },
             {
               "sectionType": "fixed",
@@ -48,7 +51,13 @@
               "columns": 3,
               "prices": false,
               "names": true,
-              "productsInfo": { "filter": "tag", "content": ["tag1", "nigth"] }
+              "productsInfo": {
+                "filter": "tag",
+                "content": [
+                  "tag1",
+                  "nigth"
+                ]
+              }
             },
             {
               "sectionType": "carousel",
@@ -59,7 +68,13 @@
               "rows": 2,
               "prices": true,
               "names": false,
-              "productsInfo": { "filter": "free", "content": [1, 2] }
+              "productsInfo": {
+                "filter": "free",
+                "content": [
+                  1,
+                  2
+                ]
+              }
             }
           ]
         }
@@ -69,6 +84,5 @@
       "conversations": {},
       "places": {}
     }
-
   }
 }
