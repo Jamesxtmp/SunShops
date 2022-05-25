@@ -32,16 +32,23 @@
 }
 
 .selectors {
-  background-color: rgba(209, 209, 209, 0.329);
+  top: var(--selectorsElement-top);
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 .selectors .wrap-categories {
-  background-color: rgba(0, 255, 157, 0.295);
+  margin: 4px;
   margin-left: 4vw;
   display: flex;
   width: 80%;
+  max-width: 80%;
+  overflow: overlay;
+  border-radius: 4px;
+  box-shadow: var(--categoriesElement-boxShadow);
+}
+.selectors .wrap-categories::-webkit-scrollbar {
+  width: 0;
 }
 @media (min-width: 750px) {
   .selectors .wrap-categories {
@@ -53,7 +60,7 @@
   border-radius: 12px;
   height: 80px;
   width: 54px;
-  margin-right: 8px;
+  margin: 0 4px 0 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +71,6 @@
   justify-content: center;
 }
 .selectors .wrap-categories .wrap-categorie .logo {
-  background-color: rgba(0, 47, 255, 0.226);
   height: 60%;
   align-items: center;
 }
@@ -76,17 +82,18 @@
   border-radius: 4px;
 }
 .selectors .wrap-categories .wrap-categorie .title {
-  background-color: rgba(174, 0, 255, 0.226);
   height: 40%;
   align-items: top;
 }
 .selectors .wrap-categories-plus {
-  background-color: rgba(0, 0, 255, 0.295);
+  margin: 4px;
   margin-right: 4vw;
   width: 20%;
   max-height: 82px;
   overflow: overlay;
   scrollbar-width: none;
+  border-radius: 4px;
+  box-shadow: var(--categoriesPlusElement-boxShadow);
 }
 .selectors .wrap-categories-plus::-webkit-scrollbar {
   width: 0;
@@ -139,6 +146,8 @@
   justify-content: center;
   width: 25vw;
   left: 4vw;
+  top: var(--perfilElement-top);
+  height: var(--perfilElement-height);
 }
 @media (min-width: 750px) {
   .exponent .head-main .perfil-photo {
@@ -146,10 +155,14 @@
     width: 18%;
   }
 }
+.exponent .head-main .perfil-photo img {
+  clip-path: var(--perfilElement-clipPath);
+}
 .exponent .head-main .more-info {
   display: inline-flex;
   position: absolute;
   right: 4vw;
+  top: var(--moreInfoElement-top);
 }
 @media (min-width: 750px) {
   .exponent .head-main .more-info {
@@ -165,6 +178,7 @@
   font-size: 0.8em;
   max-height: 2.5em;
   overflow: hidden;
+  top: var(--titleElement-top);
 }
 @media (min-width: 750px) {
   .exponent .head-main .shop-name {

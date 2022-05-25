@@ -33,15 +33,21 @@
             justify-content: center;
             width: 25vw;
             left: 4vw;
+            top: var( --perfilElement-top );
+            height: var( --perfilElement-height );
             @media ( min-width: 750px ) {
                 left: 5%;
                 width: 18%;
+            }
+            img{
+                clip-path: var(--perfilElement-clipPath);
             }
         }
         .more-info{
             display: inline-flex;
             position: absolute;
             right: 4vw;
+            top: var(--moreInfoElement-top);
             @media ( min-width: 750px ) {
                 right: 5%;
             }
@@ -55,6 +61,7 @@
             font-size: .8em;
             max-height: 2.5em;
             overflow: hidden;
+            top: var(--titleElement-top);
             @media ( min-width: 750px ) {
                 width: 90%;
                 font-size: 1.5em;

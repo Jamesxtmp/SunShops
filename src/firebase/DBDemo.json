@@ -26,7 +26,7 @@
           ]
         },
         "1": {
-          "title": "Pueba",
+          "title": "Prueba",
           "iconType": "imgSrc",
           "iconlink": "https://picsum.photos/30/30?random",
           "content": [
@@ -77,6 +77,31 @@
               }
             }
           ]
+        },
+        "2": {
+          "title": "Cataloge",
+          "iconType": "fwName",
+          "iconlink": "fa-book-open"
+        },
+        "3": {
+          "title": "Cataloge",
+          "iconType": "fwName",
+          "iconlink": "fa-book-open"
+        },
+        "4": {
+          "title": "Cataloge",
+          "iconType": "fwName",
+          "iconlink": "fa-book-open"
+        },
+        "5": {
+          "title": "Cataloge",
+          "iconType": "fwName",
+          "iconlink": "fa-book-open"
+        },
+        "6": {
+          "title": "Cataloge",
+          "iconType": "fwName",
+          "iconlink": "fa-book-open"
         }
       },
       "products": {},

@@ -5,12 +5,12 @@ const CategoriesSelectors = () => {
 
     return(
         <div className="selectors" id="selectors">
-            <div className="wrap-categories" >{
+            <div className="wrap-categories" id="wrap-categories">{
                 categories === undefined
                 ?   'Cargando...'
                 :   categories.map( categorie =>
                         // id invalido
-                        <div className="wrap-categorie" key={ categorie.title } >
+                        <div className="wrap-categorie" key={ Math.random() } >
                             <div className="logo" >{
                                 categorie.iconType == 'fwName'
                                 ?   <i className={`fa-solid ${categorie.iconlink}`}></i>
@@ -22,7 +22,7 @@ const CategoriesSelectors = () => {
                         </div>
                     )
             }</div>
-            <div className="wrap-categories-plus">
+            <div className="wrap-categories-plus" id="wrap-categories-plus">
                 <div className="wrap-categorie-plus" >
                     <i className="fa-solid fa-dragon"></i>
                 </div>

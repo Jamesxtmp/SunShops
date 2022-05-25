@@ -11,29 +11,15 @@ import SellDirectionsButton from './infoHeader/SellDirectionsButton'
 import CarButton from './infoHeader/CarButton'
 import CategoriesSelectors from './categoriesSelectors/CategoriesSelectors'
 
+/* help importation */
+import { setVariablesCss } from './helpers/headerCssSetVariables'
+
 const ExponentIndex = () => {
     const dispatch = useDispatch()
     dispatch( extractData( 'sunshops' ) )
 
     useEffect( () => {
-        //? Hacer el Perfil cudarado
-        const perfilElement = document.getElementById('perfil-photo')
-        perfilElement.style.height = `${perfilElement.clientWidth}px`
-        //? Recorte Circular a cualquier imagen
-        const imgPerfilElement = document.getElementById('portada-photo-img')
-        imgPerfilElement.style.clipPath = `circle( ${perfilElement.clientWidth / 2 }px )`
-        //? Hacer que el perfil se alinie
-        const portadaHeigth = document.getElementById('portada-photo').clientHeight
-        perfilElement.style.top = `calc( ${ portadaHeigth }px - ${(perfilElement.clientWidth / 2)}px )`
-        //? Hacer que la info se alinie
-        const moreInfoElement = document.getElementById('more-info')
-        moreInfoElement.style.top = `${ portadaHeigth + 10 }px`
-        //?Hacer que el titulo que alinie
-        const titleElement = document.getElementById('shop-name')
-        titleElement.style.top = `${perfilElement.clientWidth / 2 + 8 }px`
-        //?Hacer que Selectors se alinie
-        const selectorsElement = document.getElementById('selectors')
-        selectorsElement.style.top = `${perfilElement.clientWidth / 2 + 18 }px`
+        setVariablesCss()
     }, [] )
     return(<>
         <div className="exponent" >
