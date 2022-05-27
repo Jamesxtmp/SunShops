@@ -1,5 +1,8 @@
 .sellDatesView{
     .followers{
+        @media ( min-width: 750px ) {
+            font-size: 1.2em;
+        }
     }
     .calification{
         .calification-string{
@@ -20,6 +23,16 @@
         .inactive{
             background-color: #00000000;
         }
+        @media ( min-width: 750px ) {
+            .calification-string{
+                font-size: 1.2em;
+            }
+            .calification-point{
+                width: 8px;
+                height: 8px;
+                margin-right: 2px
+            }
+        }
     }
 }
 .buttons-main{
@@ -31,9 +44,22 @@
         border-radius: 8px;
         padding: 5px;
         margin-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .button-style-ancho{
         padding: 5px 16px;
-
+    }
+    @media ( min-width: 750px ){
+        margin-left: 20px;
+        .button-style, .button-style-ancho{
+            width: 20px;
+            height: 30px;
+            font-size: 1.2em;
+        }
+        .button-style-ancho{
+            width: 40px;
+        }
     }
 }

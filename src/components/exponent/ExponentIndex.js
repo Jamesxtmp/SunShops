@@ -10,6 +10,7 @@ import SellDataView from './infoHeader/SellDataView'
 import SellDirectionsButton from './infoHeader/SellDirectionsButton'
 import CarButton from './infoHeader/CarButton'
 import CategoriesSelectors from './categoriesSelectors/CategoriesSelectors'
+import SelectorsShow from './categoriesShow/SelectorsShow'
 
 /* help importation */
 import { setVariablesCss } from './helpers/headerCssSetVariables'
@@ -22,8 +23,8 @@ const ExponentIndex = () => {
         setVariablesCss()
     }, [] )
     return(<>
-        <div className="exponent" >
-            <div className="head-main" >
+        <div className="exponent" id="exponent" >
+            <div className="head-main" id="head-main" >
                 <div className="portada-photo" id='portada-photo'>
                     {/* <img src={ portadaSrc } alt='Portada' /> */}
                     <img src='https://picsum.photos/700/400?random' alt='Portada' />
@@ -44,6 +45,7 @@ const ExponentIndex = () => {
                 </div>
                 <CategoriesSelectors />
             </div>
+                <SelectorsShow />
         </div>
     </>)
 }

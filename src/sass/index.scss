@@ -7,13 +7,23 @@
     font-family: Calibri;
 }
 #root{
-    --bg-section: #242526;
+    --bg-section: #252525;
     --bg: #18191a;
     --font-color: #e4e6eb;
     --shadow-color: red;
     
     
-    overflow: hidden;
+    overflow: scroll;
     background-color: var(--bg);
     color: var(--font-color);
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+}
+:root{
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
 }
