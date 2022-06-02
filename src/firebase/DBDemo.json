@@ -1,12 +1,13 @@
 {
-  "chats": {
-    "chatId": "mensajes"
-  },
   "users": {
     "sunshops": {
       "userUID": "userUID",
-      "haveShop": true,
-      "information": {},
+      "information": {
+        "portadaLink": "https://picsum.photos/800/800",
+        "perfilLink": "https://picsum.photos/600/1000",
+        "title": "SunShopS",
+        "haveShop": true
+      },
       "categories": {
         "0": {
           "title": "Cataloge",

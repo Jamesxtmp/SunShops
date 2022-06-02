@@ -12,15 +12,11 @@ import CarButton from './infoHeader/CarButton'
 import CategoriesSelectors from './categoriesSelectors/CategoriesSelectors'
 import SelectorsShow from './categoriesShow/SelectorsShow'
 
-/* help importation */
-import { setVariablesCss } from './helpers/headerCssSetVariables'
-
 const ExponentIndex = () => {
     const dispatch = useDispatch()
     dispatch( extractData( 'sunshops' ) )
 
     useEffect( () => {
-        setVariablesCss()
     }, [] )
     return(<>
         <div className="exponent" id="exponent" >

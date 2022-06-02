@@ -12,15 +12,10 @@ import { appFire } from './firebase/initializeFireBase'
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
 
-/* CSS Importation */
-import './css/index.css'
-
 /* Components Importation */
-import AuthForm from './components/auth/AuthForm';
-import ExponentIndex from './components/exponent/ExponentIndex';
+import IndexEponent from './components/exponent/IndexExponent'
 
-
-/* PreRun Ejecuted */
+/* PreRun */
 if( appFire ){}
 
 const container = document.getElementById('root');
@@ -30,8 +25,8 @@ root.render(
     <Provider store={store} >
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={ <ExponentIndex /> } ></Route>
-                <Route path='/auth' element={ <AuthForm /> } ></Route>
+                <Route path='/' element={ <IndexEponent /> } ></Route>
+                {/* <Route path='/auth' element={ <AuthForm /> } ></Route> */}
             </Routes>
         </BrowserRouter>  
     </Provider>

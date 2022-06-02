@@ -1,16 +1,41 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  variables: null,
+  variables: [],
 }
-
 export const cssSlice = createSlice({
   name: 'cssStore',
   initialState,
   reducers: {
-    setVarCssRule: ( _, { payload } ) => {
-        const latstStyleSheet = document.styleSheets[ document.styleSheets.length - 1 ]
-        latstStyleSheet.insertRule( ` body{ --${ payload.name }: ${ payload.value } } `, 0 )
+    setVarCssRule: ( state, { payload } ) => {
+      const ruleMap = document.styleSheets[0].cssRules[0].styleMap
+      const { name, value } = payload
+      const addRule = () => {
+        ruleMap.set(name, value)
+        state.variables = [
+          ...state.variables,
+          { name, value }
+        ]
+      }
+      const updateRule = (rule) => {
+        ruleMap.set(name, value)
+        const indice = state.variables.indexOf(rule)
+        state.variables[indice] = { name: rule.name, value }
+      }
+      
+      if( state.variables.length === 0 ){
+        addRule()
+      }else{
+        const found = state.variables.find( rule => {
+          if( rule.name === name ){
+            updateRule(rule)
+            return true
+          }
+        })
+        if( !found ){
+          addRule()
+        }
+      }
     },
   },
 })

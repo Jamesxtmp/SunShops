@@ -2,8 +2,6 @@ import { registerUser } from '../../firebase/login/registerUser'
 import { loginGoogle } from '../../firebase/login/loginGoogle'
 import { loginUserPass } from '../../firebase/login/loginUserPass'
 
-import '../../css/auth/indexAuth.css'
-
 const AuthForm = () => {
 
     const sendDataRegister = () => {
