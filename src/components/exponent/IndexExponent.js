@@ -10,7 +10,7 @@ import styled from "styled-components"
 import IndexHeader from "./header/IndexHeader"
 
 
-const IndexExponent_sc = styled.div`
+const IndexExponentSC = styled.div`
     background-color: #242424;
     margin: auto;
     width: 100%;
@@ -23,13 +23,13 @@ const IndexExponent = () => {
     useEffect( () => {
         dispatch( setVarCssRule({ name: '--margin-spare', value: `${ document.getElementById('indexExponent').clientWidth / 25 }px` })  )
         dispatch( extractData('sunshops') )
-    },[] )
+    }, [dispatch] )
 
 
     return(
-        <IndexExponent_sc id="indexExponent">
+        <IndexExponentSC id="indexExponent">
             <IndexHeader />
-        </IndexExponent_sc>
+        </IndexExponentSC>
     )
 }
 export default IndexExponent

@@ -1,39 +1,55 @@
 //? React 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 //? Redux 
 import { useDispatch, useSelector } from "react-redux"
 import { setVarCssRule } from "../../../redux/slices/cssMetods"
 //? Styled Components 
 import styled from "styled-components"
 
-const Portada_sc = styled.div`
-    background-color: #4ca988;
+const PortadaSC = styled.div`
     height: calc( var(--height-fragment) * 2 );
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
     @media (min-width: 800px) {
         border-radius: 0 0 16px 16px;
     }
+    img{
+        width: 100%;
+
+    }
 `
-const Perfil_sc = styled.div`
-    background-color: #31a0a0;
+const PerfilSC = styled.div`
     width: 20%;
     height: var(--height-perfil);
     position: absolute;
-    bottom: calc( var(--height-fragment) * -0.75 );
+    top: calc( calc( var(--height-fragment) * 2) - calc( var(--height-perfil) - calc( var(--height-fragment) * .75 ) ) );
     left: var(--margin-spare);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    img{
+        width: 100%;
+    }
 `
 
-const PerfilPortada = () => {
+const PerfilPortada = ({ information }) => {
+    const {  perfilLink, portadaLink } = information
     const dispatch = useDispatch()
+
     useEffect ( () => {
         dispatch( setVarCssRule( { name: '--height-fragment', value: `${document.getElementById('portada').clientWidth / 2.6 / 2 }px` } ) )
         dispatch( setVarCssRule( { name: '--height-perfil', value: `${document.getElementById('perfil').clientWidth}px` } ) )
-    },[])
-    useSelector( state => console.log( state.cssReducer  ) )
-    return(
-        <Portada_sc id="portada">
-            <Perfil_sc id="perfil"/>
-        </Portada_sc>
-    )
+    }, [])
+    return(<>
+        <PortadaSC id="portada">
+            <img src={ portadaLink } alt='Portada' ></img>
+        </PortadaSC>
+        <PerfilSC id="perfil">
+            <img src={ perfilLink  } alt='Perfil'></img>
+        </PerfilSC>
+    </>)
 }
 export default PerfilPortada

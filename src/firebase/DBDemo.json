@@ -3,6 +3,8 @@
     "sunshops": {
       "userUID": "userUID",
       "information": {
+        "followers": 123123,
+        "calification": 4,
         "portadaLink": "https://picsum.photos/800/800",
         "perfilLink": "https://picsum.photos/600/1000",
         "title": "SunShopS",
